@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="staticmap.js"></script>
+    <script src="dinamicmap.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Estático</title>
-    <style>
-        #map{
-            height: 450px;
-            width: 100%;
-        }
-        /* Barra de búsqueda */
+    <title>Mapa Dinámico</title>
+    
+</head>
+<body>
+    <h1>Mapa Dinámico</h1>
+
+    <input id="pac-input" class="controls" type="text" placeholder="Buscar lugares" />
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pKkj-H_bOea9hkxpuyobPiOyuWDCHeY&libraries=places&callback=initMap">
+</script>
+    <div id="map">
+        
+    </div>
+
+</body>
+
+<style>
+    #map{
+        height: 450px;
+        width: 100%;
+    }
+    /* Barra de búsqueda */
     #pac-input {
         width: 100%;
         height: 45px;
@@ -35,19 +51,6 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         background-color: #ffffff;
     }
-    </style>
-</head>
-<body>
-    <h1>Mapa estático</h1>
+</style>
 
-    <input id="pac-input" class="controls" type="text" placeholder="Buscar lugares" />
-
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pKkj-H_bOea9hkxpuyobPiOyuWDCHeY&libraries=places&callback=initMap">
-</script>
-    <div id="map">
-        
-    </div>
-
-</body>
 </html>
